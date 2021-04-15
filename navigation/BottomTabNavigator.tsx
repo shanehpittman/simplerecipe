@@ -5,7 +5,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import HomeScreen from '../app/screens/HomeScreen';
+import HomeScreen from '../app/screens/Home';
 import TabTwoScreen from '../app/screens/TabTwoScreen';
 import { BottomTabParamList, HomeScreenParamList, TabTwoParamList } from '../types';
 
