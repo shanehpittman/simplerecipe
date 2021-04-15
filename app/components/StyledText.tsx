@@ -9,14 +9,16 @@ export function MonoText(props: TextProps) {
     }]} />;
 }
 
-export function SoundButtonText(props: TextProps) {
+export function LandingText(props: TextProps) {
   return <Text {...props} 
-    numberOfLines={3}
+  numberOfLines={2}
     style={[props.style, { 
-      fontFamily: 'space-mono' ,
-      fontSize: 13,
-      marginBottom: 5,
-      textAlign: 'left',
-      width: 100,
+      fontFamily: 'sans-serif-light' ,
+      fontSize: 50,
+      fontWeight: 'bold',
+      color: '#eee',
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+      textShadowOffset: {width: -1, height: 1},
+      textShadowRadius: 10
     }]} />;
 }
