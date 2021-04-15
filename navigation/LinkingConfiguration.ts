@@ -6,9 +6,9 @@ export default {
     screens: {
       Root: {
         screens: {
-          Landing: {
+          Home: {
             screens: {
-              LandingScreen: 'one',
+              HomeScreen: 'one',
             },
           },
           Settings: {

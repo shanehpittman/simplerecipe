@@ -1,15 +1,16 @@
 export type RootStackParamList = {
+  Landing: undefined;
   Root: undefined;
   NotFound: undefined;
 };
 
 export type BottomTabParamList = {
-  Landing: undefined;
+  Home: undefined;
   TabTwo: undefined;
 };
 
-export type LandingScreenParamList = {
-  LandingScreen: undefined;
+export type HomeScreenParamList = {
+  HomeScreen: undefined;
 };
 
 export type TabTwoParamList = {

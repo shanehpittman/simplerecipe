@@ -1,13 +1,13 @@
 import { AntDesign } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator , } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import LandingScreen from '../app/screens/LandingScreen';
+import HomeScreen from '../app/screens/HomeScreen';
 import TabTwoScreen from '../app/screens/TabTwoScreen';
-import { BottomTabParamList, LandingScreenParamList, TabTwoParamList } from '../types';
+import { BottomTabParamList, HomeScreenParamList, TabTwoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -16,11 +16,11 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Landing"
+      initialRouteName="Home"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="Landing"
-        component={LandingScreenNavigator}
+        name="Home"
+        component={HomeScreenNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="appstore-o" color={color} />,
         }}
@@ -44,17 +44,19 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof AntDesign>['name'
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const LandingScreenStack = createStackNavigator<LandingScreenParamList>();
+const HomeScreenStack = createStackNavigator<HomeScreenParamList>();
 
-function LandingScreenNavigator() {
+function HomeScreenNavigator() {
   return (
-    <LandingScreenStack.Navigator>
-      <LandingScreenStack.Screen
-        name="LandingScreen"
-        component={LandingScreen}
-        options={{ headerTitle: 'Landing Screen Title' }}
+    <HomeScreenStack.Navigator
+      screenOptions={{ headerShown: false, }}
+    >
+      <HomeScreenStack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerTitle: 'Home Screen Title' }}
       />
-    </LandingScreenStack.Navigator>
+    </HomeScreenStack.Navigator>
   );
 }
 

@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
-export default function LandingScreen(props: any) {
+export default function HomeScreen(props: any) {
     return (
     <View style={styles.container}>
-      <Text style={styles.title}>Landing screen</Text>
+      <Text style={styles.title}>Home screen</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
     );
