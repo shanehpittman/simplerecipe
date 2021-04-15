@@ -16,10 +16,10 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Sounds"
+      initialRouteName="Landing"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="Sounds"
+        name="Landing"
         component={LandingScreenNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="appstore-o" color={color} />,
