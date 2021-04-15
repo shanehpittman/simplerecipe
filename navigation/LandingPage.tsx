@@ -5,7 +5,7 @@ import { RootStackParamList } from '../types';
 import { Text, View } from '../app/components/Themed';
 
 export default function LandingPage({ navigation,
-}: StackScreenProps<RootStackParamList, 'NotFound'>) {
+}: StackScreenProps<RootStackParamList, 'Landing'>) {
     return (
     <View style={styles.container}>
       <Text style={styles.title}>Landing Page</Text>
